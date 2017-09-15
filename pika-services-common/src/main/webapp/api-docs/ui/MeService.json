@@ -1,0 +1,87 @@
+{
+  "swaggerVersion": "1.1",
+  "basePath": "/common",
+  "resourcePath": "MeService",
+  "apis" : [
+    {
+      "path" : "/api/v1/me",
+      "description" : "The MeService is used for checking Bearer tokens.",
+      "operations" : [
+        {
+          "httpMethod" : "GET",
+          "nickname" : "getMeClaims",
+          "responseClass" : "ns0_meBean",
+          "parameters" : [
+        ],
+        "summary" : "Checks token claims.",
+        "notes" : "Checks token claims.",
+        "errorResponses" : [
+        ],
+        "produces" : [
+          "application/json"
+        ],
+        "consumes" : [
+          "application/json"
+        ]
+      }
+      ]
+    }
+  ],
+  "models" : {
+    "ns0_basicBean" : {
+      "properties" : {
+      },
+      "id" : "ns0_basicBean"
+    }
+    ,
+    "ns0_errorBean" : {
+      "properties" : {
+        "error" : {
+          "required" : false,
+          "description" : "The Error.",
+          "type" : "string"
+        }
+      },
+      "id" : "ns0_errorBean"
+    }
+    ,
+    "ns0_idBean" : {
+      "properties" : {
+        "id" : {
+          "required" : false,
+          "description" : "The Id.",
+          "type" : "string"
+        }
+      },
+      "id" : "ns0_idBean"
+    }
+    ,
+    "ns0_meBean" : {
+      "properties" : {
+        "username" : {
+          "required" : false,
+          "description" : "The Username.",
+          "type" : "string"
+        }
+      },
+      "id" : "ns0_meBean"
+    }
+    ,
+    "ns0_basicParams" : {
+      "properties" : {
+      },
+      "id" : "ns0_basicParams"
+    }
+    ,
+    "ns0_idParams" : {
+      "properties" : {
+        "id" : {
+          "required" : true,
+          "description" : "The Id.",
+          "type" : "string"
+        }
+      },
+      "id" : "ns0_idParams"
+    }
+  }
+}

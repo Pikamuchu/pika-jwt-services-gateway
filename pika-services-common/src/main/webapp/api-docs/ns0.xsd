@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="error" type="errorBean"/>
+  <xs:element name="id" type="idBean"/>
+  <xs:element name="me" type="meBean"/>
+  <xs:element name="id" type="idParams"/>
+  <xs:complexType name="basicBean" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[The Class BasicBean.]]>
+      </xs:documentation>
+    </xs:annotation>
+  </xs:complexType>
+  <xs:complexType name="errorBean">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[The type Error bean.]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="basicBean">
+        <xs:sequence>
+          <xs:element name="error" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                <![CDATA[The Error.]]>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="idBean">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[The type Id bean.]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="basicBean">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                <![CDATA[The Id.]]>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="meBean">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[The type Me bean.]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="basicBean">
+        <xs:sequence>
+          <xs:element name="username" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>
+                <![CDATA[The Username.]]>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="basicParams" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[The Class BasicBean.]]>
+      </xs:documentation>
+    </xs:annotation>
+  </xs:complexType>
+  <xs:complexType name="idParams">
+    <xs:annotation>
+      <xs:documentation>
+        <![CDATA[The type Id params.]]>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="basicParams">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                <![CDATA[The Id.]]>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

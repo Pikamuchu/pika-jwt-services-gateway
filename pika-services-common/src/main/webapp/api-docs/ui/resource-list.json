@@ -1,0 +1,12 @@
+{
+  "swaggerVersion": "1.1",
+  "basePath": "/common/api-docs/ui",
+  "apis": [
+    {
+      "path": "/MeService.json",
+      "description" : "The MeService is used for checking Bearer tokens.",
+      "nickname" : "MeService",
+      "resourcePath" : "MeService"
+    }
+  ]
+}

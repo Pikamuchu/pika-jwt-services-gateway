@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enunciate label="full" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://enunciate.codehaus.org/schemas/enunciate-1.31.xsd">
+	<disable-rule id="jaxb.noarg.constructor" />
+	<disable-rule id="jaxws.client.disallow.maps" />
+	<api-classes>
+		<include pattern="com.pikamachu.services.*.services.**"/>
+		<include pattern="com.pikamachu.services.*.security.**"/>
+		<include pattern="com.pikamachu.services.*.params.**"/>
+		<include pattern="com.pikamachu.services.*.beans.**"/>
+	</api-classes>
+	<api-import pattern="com.pikamachu.services.*.services.**"/>
+	<api-import pattern="com.pikamachu.services.*.security.**"/>
+	<api-import pattern="com.pikamachu.services.*.params.**"/>
+	<api-import pattern="com.pikamachu.services.*.beans.**"/>
+	<services>
+		<rest deploymentContext="/icg-dshops" defaultRestSubcontext="/api/v1"/>
+	</services>
+	<modules>
+		<amf disabled="true" />
+		<c disabled="true" />
+		<obj-c disabled="true" />
+		<csharp disabled="true" />
+		<cxf disabled="true" />
+		<gwt disabled="true" />
+		<jaxws-ri disabled="true" />
+		<jersey disabled="true" />
+		<java-client disabled="true" />
+		<spring-app disabled="true" />
+		<ruby disabled="true" />
+		<php disabled="true" />
+		<basic-app disabled="true" />
+		<docs title="pikamachu Services ICG DSHOPS"  copyright="2016 pikamachu. All Rights Reserved." includeExampleXml="false" includeDefaultDownloads="false"/>
+		<swagger />
+	</modules>
+</enunciate>

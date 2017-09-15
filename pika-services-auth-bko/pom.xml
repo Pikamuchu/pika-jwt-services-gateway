@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>pika-services-auth_bko</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>pika-services-auth_bko</name>
+	<description>pikamachu Services Authentication Backoffice.</description>
+
+	<parent>
+		<groupId>com.pikamachu.services</groupId>
+		<artifactId>jwt-services-gateway</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<sonar.login>b2e-dev</sonar.login>
+		<sonar.password>{L04GSFimD28HVNH723X6fImU8jW/rytIHslDjymgRos=}</sonar.password>
+		<sonar.projectKey>services-auth-bko</sonar.projectKey>
+		<sonar.projectName>pikamachu Services Authentication</sonar.projectName>
+		<!-- Enunciate Rest services properties. Remember to change in enunciate.xml file too. -->
+		<enunciate.deploymentContext>/auth-bko</enunciate.deploymentContext>
+		<swagger.title>pikamachu Auth Services - Swagger docs</swagger.title>
+		<!-- Swagger Codegen languages. Default swagger -->
+		<swagger.codegen.language>javascript-closure-angular</swagger.codegen.language>
+		<!-- Enunciate and swagger codegen. Use 'none' to disable and 'process-classes', 'prepare-package' to enable -->
+		<enunciate.phase>process-classes</enunciate.phase>
+		<swagger.codegen.phase>prepare-package</swagger.codegen.phase>
+		<copy-docs-to-webapp.phase>prepare-package</copy-docs-to-webapp.phase>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.pikamachu.services</groupId>
+			<artifactId>pika-services-common</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+</project>

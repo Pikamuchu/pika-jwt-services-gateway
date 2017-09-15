@@ -1,0 +1,60 @@
+{
+  "swagger" : "2.0",
+  "info" : { },
+  "basePath" : "/common",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/api/v1/me" : {
+      "get" : {
+        "tags" : [ "MeService" ],
+        "summary" : "Checks token claims.",
+        "description" : "Checks token claims.",
+        "operationId" : "getMeClaims",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "default" : {
+            "description" : "success"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ns0_basicBean" : { },
+    "ns0_idBean" : {
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "The Id."
+        }
+      }
+    },
+    "ns0_basicParams" : { },
+    "ns0_meBean" : {
+      "properties" : {
+        "username" : {
+          "type" : "string",
+          "description" : "The Username."
+        }
+      }
+    },
+    "ns0_errorBean" : {
+      "properties" : {
+        "error" : {
+          "type" : "string",
+          "description" : "The Error."
+        }
+      }
+    },
+    "ns0_idParams" : {
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "The Id."
+        }
+      }
+    }
+  }
+}
